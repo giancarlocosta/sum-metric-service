@@ -12,9 +12,20 @@ that metric that exists in this map, and call a setTimeout function (to emulate 
 that will come back after an hour and update this map by subtracting that original
 value from the total, essentially erasing data older than an hour.
 Example:
+
+active_visitors with 'value' of 5 is POSTed and 'num_clicks' with 'value' of 87 is POSTed:
+
 metricSums: {
   'active_visitors': 5,
   'num_clicks': 87,
+  ...
+}
+
+after an hour the setTimeout functions update the map:
+
+metricSums: {
+  'active_visitors': 0,
+  'num_clicks': 0,
   ...
 }
 */
@@ -22,7 +33,7 @@ const metricSums = {};
 
 
 /**
-* Class representing a Controller for metric model/type.
+* Class representing a Controller for Metric model/type.
 */
 class MetricController  {
 
