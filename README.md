@@ -36,7 +36,6 @@ _See [bin/](#bin) for all utility scripts and commands._
 Requirements for running the application:
 
 * Node.js >= 8
-* Docker
 
 ### Building
 
